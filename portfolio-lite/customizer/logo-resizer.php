@@ -74,17 +74,17 @@ function portfolio_lite_logo_customize_logo_resize( $html ) {
 		}
 
 		// add the CSS
-		$css = '
+		/*$css = '
 <style>
-.custom-logo {
-	height: ' . $img['height'] . 'px;
-	max-height: ' . $max['height'] . 'px;
-	max-width: ' . $max['width'] . 'px;
-	width: ' . $img['width'] . 'px;
-}
+//.custom-logo {
+//	height: ' . $img['height'] . 'px;
+//	max-height: ' . $max['height'] . 'px;
+//	max-width: ' . $max['width'] . 'px;
+//	width: ' . $img['width'] . 'px;
+//}
 </style>';
 
-		$html = $css . $html;
+		$html = $css . $html;*/
 	}
 
 	return $html;

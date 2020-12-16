@@ -135,7 +135,7 @@
 		<?php if ( ! is_single() ) { ?>
 
 		<!-- BEGIN .four columns -->
-		<div id="header" class="four columns side-header">
+		<div id="header" class="three columns side-header">
 
 			<?php if ( has_custom_logo() ) { ?>
 
@@ -169,7 +169,7 @@
 		</div>
 
 		<!-- BEGIN .twelve columns -->
-		<div class="twelve columns">
+		<div class="thirteen columns">
 
 			<!-- BEGIN #masthead -->
 			<div id="masthead">

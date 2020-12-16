@@ -112,6 +112,9 @@
 		align-content: center;
 		justify-content: space-between;
 	}
+    .custom-logo-link {
+        display: none;
+    }
 	#masthead {
 		display: block;
 		padding: 12px;
@@ -144,6 +147,7 @@
 	}
 	.content {
 		display: block;
+        padding: 0px 36px;
 	}
 	.content .five.columns {
 		border: none;
