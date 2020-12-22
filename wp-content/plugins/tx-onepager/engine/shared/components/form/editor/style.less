@@ -1,0 +1,80 @@
+@bower_path : '../../../../../bower_components';
+@lithium_path : '../../../../lithium';
+
+// Lesshat
+@import "@{bower_path}/lesshat/build/lesshat.less";
+// Lithium
+@import "@{lithium_path}/builder/variables.less";
+
+.op-editor{
+  .mce-btn-group:not(:first-child) {
+    padding-left: 0px;
+  }
+
+  .mce-btn-group .mce-btn {
+    margin-left: 1px;
+  }
+
+  .mce-container.mce-flow-layout-item.mce-first.mce-btn-group,
+  .mce-container.mce-flow-layout-item.mce-btn-group:nth-child(2){
+    display: none;
+  }
+
+  .mce-tooltip {
+    display: none !important;
+  }
+
+  .mce-panel{
+    background: @bg-secondary;
+    border-color: lighten(@bg-primary, 10%);
+    border-radius: 4px 4px 0 0;
+  }
+
+  .mce-menubar{ border: 0; }
+  .mce-menubar .mce-menubtn, .mce-statusbar{ display: none;}
+
+  .mce-btn {
+    background: @bg-primary;
+    border-color: darken(@bg-secondary, 3%);
+    &:hover{
+      background: darken(@bg-primary, 5%);
+      border-color: darken(@bg-secondary, 5%);
+    }
+    button { padding: 2px 4px; color: @text-color; }
+    &.mce-active,
+    &.mce-active:hover{
+      background: darken(@bg-primary, 5%);
+      border-color: darken(@bg-secondary, 5%);
+    }
+  }
+  .mce-btn-group:not(:first-child){ border: 0; }
+  .mce-ico{
+    color: lighten(@text-color, 5%);
+    &:hover{ color: #fff; }
+  }
+
+  .mce-menu{
+    background: darken(@bg-primary, 5%) !important;
+  }
+
+  .mce-menu-item:hover, .mce-menu-item.mce-selected, .mce-menu-item:focus{
+    background: @bg-primary !important;
+    color: lighten(@text-color, 10%) !important;
+  }
+  .mce-menu-item .mce-ico, .mce-menu-item .mce-text{
+    color: @text-color !important;
+  }
+}
+
+.repeatable-control .op-editor{
+  .mce-btn-group .mce-btn{
+    margin: 1px;
+
+    .mce-ico{
+      font-size: 10px;
+      height: 10px;
+      width: 10px;
+    }
+  }
+
+}

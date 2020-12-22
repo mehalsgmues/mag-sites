@@ -1,0 +1,311 @@
+@btn : @brand-primary;
+
+// ------------------------------------------
+// Wordpress Admin override + Style
+// ------------------------------------------
+// #toplevel_page_onepager{
+//   display: none;
+// }
+// Admin Toolbar
+// #wp-admin-bar-op-add-block {
+//   background: @brand-primary !important;
+//   color: #fff;
+//   cursor: pointer;
+//   &:hover .ab-item {
+//     background: darken(@brand-primary, 4%) !important;
+//     color: #fff !important;
+//   }
+
+// }
+// Logo - Sidebar menu
+#adminmenu .toplevel_page_onepager .wp-menu-image img {
+  width: 22px;
+}
+#adminmenu #toplevel_page_onepager a[href*="onepager-gopro"]{
+  color: #f44336;
+}
+
+// Font awesome for top menu
+.ab-top-menu {
+  .fa {
+    font-family: FontAwesome !important;
+  }
+}
+
+// Buildmode/livemood
+#wp-admin-bar-op-enable-livemode .fa,
+#wp-admin-bar-op-disable-livemode .fa {
+  font-size: 11px;
+  .transition(color .2s linear);
+}
+
+// Live mode enable
+#wp-admin-bar-op-enable-livemode {
+  .fa {
+    color: #f44336;
+  }
+  &:hover {
+    .fa {
+      color: #4CAF50;
+    }
+  }
+}
+
+// Live mode disabled
+#wp-admin-bar-op-disable-livemode {
+  .fa {
+    color: #4CAF50;
+  }
+  &:hover {
+    .fa {
+      color: #f44336;
+    }
+  }
+}
+
+// Admin UI
+// -----------------------------------
+.op-btn {
+  background: @btn;
+  color: #fff;
+  padding: 15px;
+  border: 1px solid darken(@btn, 10%);
+  position: relative;
+  cursor: pointer;
+  border-radius: 4px;
+  line-height: 1em;
+  text-decoration: none;
+  font-size: 12px;
+
+  &:hover{
+    background: darken(@btn, 12%);
+    border-color: @btn;
+    color: #fff;
+  }
+}
+.op-btn-secondary--small{
+  padding: 4px 8px; font-weight: normal;
+  margin-top: 5px;
+  background: @text-color;
+  border-color: darken(@text-color, 10%);
+}
+
+.op-btn-with-logo {
+  padding: 7px 15px 10px 42px;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 22px;
+    height: 100%;
+    background: url('../images/logo-white.png') no-repeat;
+    background-size: contain;
+  }
+}
+
+#disable-onepager {
+  background: @text-color;
+  border-color: darken(@text-color, 2%);
+  &:hover{
+    background: darken(@text-color, 10%);
+  }
+}
+
+// Toolbar
+//--------------------------------------------
+.toolbar {
+  background: #f5f5f5;
+  margin: -6px -12px 10px;
+  padding: 5px;
+  .clearfix();
+
+  .op-btns-group {
+    float: right;
+    > a {
+      padding: 7px 10px;
+      margin-top: 0;
+      display: inline-block;
+    }
+  }
+  #op-group-filter {
+    float: left;
+  }
+}
+
+#op-presets {
+  .clearfix();
+
+  .op-editpage-link{
+    padding: 100px;
+    margin-bottom: 30px;
+    background: @bg-primary;
+    border-radius: 4px;
+    text-align: center;
+
+    p{ color: @text-color; }
+    
+    .op-btn{
+      display: inline-block;
+    }
+  }
+  .media {
+    float: left;
+    width: 25%;
+    .box-sizing(border-box);
+  }
+  .thumbnails {
+    padding: 10px;
+    margin: 6px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+
+    .transition(all 0.3s linear);
+
+    img {
+      max-width: 100%; height: 243px;
+    }
+    figcaption h3{
+      font-size: 12px;
+      margin: 6px 0 0;
+      color: @text-color;
+    }
+
+    .op-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -20px 0 0 -63px;
+      padding: 12px 40px;
+      opacity: 0;
+      .transition(opacity 0.3s linear);
+    }
+
+    &:hover {
+      border-color: @btn;
+      .op-btn {
+        opacity: 1;
+      }
+    }
+    .txop-pro-badge{
+      background:#7e0359;
+      color:white;
+      padding:2px 7px 2px;
+      position: absolute;
+      border-radius:2px;
+      text-transform: uppercase;
+      font-weight: 400;
+      z-index:1;
+      top:0;
+      right:0;
+      font-size: 9px;
+    }
+    .txop-new-badge{
+      background:#06048c;
+      color:white;
+      padding:2px 7px 2px;
+      position: absolute;
+      border-radius:2px;
+      text-transform: uppercase;
+      font-weight: 400;
+      z-index:1;
+      font-size: 9px;
+      left:0;
+      top:0;
+    }
+    .txop-update-badge{
+      background:#038997;
+      color:white;
+      padding:2px 7px 2px;
+      position: absolute;
+      border-radius:2px;
+      text-transform: uppercase;
+      font-weight: 400;
+      z-index:1;
+      font-size: 9px;
+      left:0;
+      top:0;
+    }
+
+  }
+
+}
+
+
+//
+// onepager loading gif
+//
+.onepager-loading {
+    background: #333;
+    z-index: 99;
+    position: absolute;
+    opacity: .6;
+    width: 100%;
+    height: 100%;
+    // top: 0;
+    // bottom: 0;
+
+    .uk-spinner {
+      font-size: 1000px;
+      color: white;
+      padding: 100px;
+      text-align: center;
+      display: block;
+
+      svg {
+        width: 60px;
+      }
+    }
+}
+#onepager_meta{
+  display: none;
+}
+#op_create_page_from_layout_button .uk-spinner{
+    float: right;
+    margin-left: 20px;
+    line-height: 38px;
+  }
+
+.txop-admin{
+  .uk-card{
+    .txop-pro-badge{
+      background:#7e0359;
+      color:white;
+      padding:1px 7px 1px;
+      position: absolute;
+      border-radius:2px;
+      text-transform: uppercase;
+      font-weight: 400;
+      z-index:1;
+      right:0;
+      font-size: 9px;
+    }
+    .txop-new-badge{
+      background:#06048c;
+      color:white;
+      padding:1px 7px 1px;
+      position: absolute;
+      border-radius:2px;
+      text-transform: uppercase;
+      font-weight: 400;
+      z-index:1;
+      font-size: 9px;
+    }
+    .txop-update-badge{
+      background:#038997;
+      color:white;
+      padding:1px 7px 1px;
+      position: absolute;
+      border-radius:2px;
+      text-transform: uppercase;
+      font-weight: 400;
+      z-index:1;
+      font-size: 9px;
+    }
+  }
+}

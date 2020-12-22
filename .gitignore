@@ -1,6 +1,12 @@
-index.php
-twentyfourteen/
-twentytwenty/
-twentytwentyone/
-whitedot/
+.idea
+vendor
+wp-content/*
+!wp-content/plugins/
+!wp-content/themes/
 
+wp-content/themes/*
+!wp-content/themes/portfolio-lite/
+
+*.log
+*.sql
+*.sqlite
