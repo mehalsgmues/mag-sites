@@ -468,6 +468,7 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 	padding: 0px;
 	box-sizing:border-box;
 	z-index: 9;
+    margin-top: 50px;
 }
 .top-navigation {
 	float: right;
@@ -2686,4 +2687,19 @@ div[class*="wp-block"] form.contact-form .contact-submit {
 }
 .wp-block-social-links .wp-social-link a {
 	color: inherit;
+}
+
+#link-participate-wrapper {
+    text-align: center;
+}
+
+.link-participate {
+    font-size: 1.3em;
+    font-weight: 400;
+    font-style: italic;
+    border-bottom: 1px solid;
+}
+
+a.link-participate:hover {
+    text-decoration: none;
 }
