@@ -535,7 +535,7 @@ function portfolio_lite_excerpt_more( $more_link ) {
 	$more_link = sprintf( '<p class="more-link-wrapper"><a href="%1$s" class="more-link">%2$s</a></p>',
 		esc_url( get_permalink( get_the_ID() ) ),
 		/* translators: %s: Name of current post */
-		sprintf( __( 'Continue Reading<span class="screen-reader-text"> "%s"</span>', 'portfolio-lite' ), get_the_title( get_the_ID() ) )
+		sprintf( __( '<span class="screen-reader-text">"%s" </span>Weiterlesen', 'portfolio-lite' ), get_the_title( get_the_ID() ) )
 	);
 	return $more_link;
 }
@@ -556,7 +556,7 @@ function portfolio_lite_more_link( $more_link ) {
 	$more_link = sprintf( '<p class="more-link-wrapper"><a href="%1$s" class="more-link">%2$s</a></p>',
 		esc_url( get_permalink( get_the_ID() ) ),
 		/* translators: %s: Name of current post */
-		sprintf( __( 'Continue Reading<span class="screen-reader-text"> "%s"</span>', 'portfolio-lite' ), get_the_title( get_the_ID() ) )
+		sprintf( __( '<span class="screen-reader-text">"%s" </span>Weiterlesen', 'portfolio-lite' ), get_the_title( get_the_ID() ) )
 	);
 	return $more_link;
 }

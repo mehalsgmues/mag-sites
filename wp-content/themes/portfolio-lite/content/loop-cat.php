@@ -27,20 +27,21 @@
 	<!-- BEGIN .post class -->
 	<div <?php post_class( 'archive-holder' ); ?> id="post-<?php the_ID(); ?>">
 
+		<div class="article-category"><?php the_category(' '); ?></div>
+		<div class="article-date"><?php the_date(); ?></div>
+		<a href="<?php the_permalink(); ?>" rel="bookmark"><h2 class="article-title"><?php the_title(); ?></h2></a>
+		<div class="entry-content">
+			<?php the_excerpt(); ?>
+		</div>
+
 		<?php if ( has_post_thumbnail() ) { ?>
+			<a href="<?php the_permalink(); ?>" rel="bookmark">
 			<div class="feature-img">
-				<a class="img-text" href="<?php the_permalink(); ?>" rel="bookmark"><h2 class="title"><?php the_title(); ?></h2></a>
 				<div class="bg-img" style="background-image: url(<?php echo esc_url( $thumb[0] ); ?>);">
 					<?php the_post_thumbnail( 'portfolio-featured-large' ); ?>
 				</div>
 			</div>
-		<?php } else { ?>
-			<div class="feature-img">
-				<a class="img-text" href="<?php the_permalink(); ?>" rel="bookmark"><h2 class="title"><?php the_title(); ?></h2></a>
-				<div class="bg-img" style="background-image: url(<?php echo esc_url( get_template_directory_uri() ); ?>/images/placeholder.jpg);">
-					<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/placeholder.jpg" alt="Placeholder" />
-				</div>
-			</div>
+			</a>
 		<?php } ?>
 
 	<!-- END .post class -->
