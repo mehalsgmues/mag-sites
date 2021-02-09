@@ -6,6 +6,7 @@ wp-content/*
 
 wp-content/themes/*
 !wp-content/themes/portfolio-lite/
+!wp-content/themes/mehalsgmues/
 
 *.log
 *.sql

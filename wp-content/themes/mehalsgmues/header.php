@@ -145,10 +145,6 @@
 
 			<?php if ( has_nav_menu( 'main-menu' ) ) { ?>
 				<!-- BEGIN #navigation -->
-                <div id="link-participate-wrapper">
-                    <a href="https://www.mehalsgmues.ch/mitmachen" class="link-participate">Jetzt mitmachen!</a>
-                </div>
-
 				<nav id="navigation">
 
 					<?php

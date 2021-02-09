@@ -39,8 +39,7 @@
 				class="align-center"<?php } ?>>
 
 				<p class="footer-credits">
-					<?php esc_html_e( 'Copyright', 'portfolio-lite' ); ?> &copy; <?php echo esc_html( date( 'Y' ) ); ?> &middot; <?php esc_html_e( 'All Rights Reserved', 'portfolio-lite' ); ?> &middot;
-					<?php esc_html( bloginfo( 'name' ) ); ?> &middot; <?php /* translators: 1: Theme name. 2: Theme link. */ printf( esc_html__( 'Theme: %1$s by %2$s', 'portfolio-lite' ), 'Portfolio Lite', '<a href="http://organicthemes.com/">Organic Themes</a>' ); ?>
+					meh als gmües - Reckenholzstrasse 150, 8046 Zürich
 				</p>
 
 			</div>
