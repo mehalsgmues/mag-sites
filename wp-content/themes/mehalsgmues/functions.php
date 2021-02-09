@@ -120,7 +120,6 @@ if ( ! function_exists( 'portfolio_lite_enqueue_scripts' ) ) {
 		wp_enqueue_style( 'portfolio-style-conditionals', get_template_directory_uri() . '/css/style-conditionals.css', array( 'portfolio-style' ), '1.0' );
 		wp_enqueue_style( 'portfolio-style-mobile', get_template_directory_uri() . '/css/style-mobile.css', array( 'portfolio-style' ), '1.0' );
 		wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.css', array( 'portfolio-style' ), '1.0' );
-		wp_enqueue_style( 'ttnooks', get_template_directory_uri() . '/css/style-ttnooks.css', array( 'portfolio-style' ), '1.0' );
 
 		// Resgister Scripts.
 		wp_register_script( 'jquery-fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js', array( 'jquery' ), '1.0' );
