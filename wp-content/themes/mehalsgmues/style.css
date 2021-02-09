@@ -3041,69 +3041,6 @@ ol.broad li::marker {
 
 
 
-/* mobile logo */
-
-@media (max-width:1023px) {
-	.site-logo {
-		position: static;
-		height: 180px;
-	}
-	
-	.site-logo a {
-		position: absolute;
-		z-index: 3;
-		background-color: white;
-		padding: 30px;
-		border-radius: 100%;
-		left: 10px;
-		top: 0;
-	}
-	
-	.custom-logo-link {
-		display: block;
-	}
-	
-	.custom-logo {
-		height: 150px !important;
-		width: auto !important;
-	}
-}
-
-
-
-
-
-
-/* squeezability */
-
-@media (max-width:1200px) {
-.wp-block-columns {
-  flex-wrap: wrap !important;
-}
-}
-@media (min-width:600px) and (max-width:1200px) {
- .wp-block-column:not(:only-child) {
-  flex-basis:calc(50% - 2em)!important;
-  flex-grow:0
- }
- .wp-block-column:nth-child(2n) {
-  margin-left:2em
-  }
-	.wp-block-column:nth-child(2n-1) {
-  margin-left:0em
-  }
-}
-@media (min-width:1024px) and (max-width:1200px) {
-  .thirteen {
-    width: 75%;
-  }
-  .three {
-    width: 25%;
-  }
-}
-
-
-
 
 
 /* extra space */
