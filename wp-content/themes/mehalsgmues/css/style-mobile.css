@@ -369,11 +369,25 @@
 	}
 	
 	.custom-logo {
-		height: 130px !important;
+		height: 150px !important;
 		width: auto !important;
 	}
 }
 
+@media (max-width:599px) {
+	.site-logo {
+		height: initial;
+	}
+	
+	.site-logo a {
+		left: 0px;
+		margin-top: -15px;
+	}
+	
+	.custom-logo {
+		height: 130px !important;
+	}
+}
 
 
 
