@@ -38,9 +38,8 @@
 				?>
 				class="align-center"<?php } ?>>
 
-				<p class="footer-credits">
-					meh als gm�es - Reckenholzstrasse 150, 8046 Z�rich
-				</p>
+				meh als gmües - Reckenholzstrasse 150, 8046 Zürich
+
 			</div>
 			
 			<div>
