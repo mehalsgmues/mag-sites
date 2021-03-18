@@ -108,7 +108,7 @@
 		display: block;
 	}
 	.portfolio-has-logo.portfolio-not-single #header.top-header {
-		display: flex;
+		display: flex!important;
 		align-content: center;
 		justify-content: space-between;
 	}

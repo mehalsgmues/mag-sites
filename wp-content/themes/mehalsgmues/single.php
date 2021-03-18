@@ -8,80 +8,60 @@
 
 get_header(); ?>
 
-<?php $thumb = ( '' != get_the_post_thumbnail() ) ? wp_get_attachment_image_src( get_post_thumbnail_id(), 'portfolio-featured-large' ) : false; ?>
-<?php $header_image = get_header_image(); ?>
-
 <!-- BEGIN .post class -->
 <div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-
-	<?php if ( get_post_gallery() || has_post_thumbnail() || ! empty( $header_image ) ) { ?>
-
-	<!-- BEGIN .row -->
-	<div class="row">
-
-		<!-- BEGIN .post-header -->
-		<div class="post-header">
-
-			<!-- BEGIN .ten columns -->
-			<div class="ten columns">
-
-				<?php if ( get_post_gallery() ) { ?>
-
-					<?php get_template_part( 'content/slider', 'gallery' ); ?>
-
-				<?php } elseif ( has_post_thumbnail() ) { ?>
-
-					<div class="feature-img bg-img" style="background-image: url(<?php echo esc_url( $thumb[0] ); ?>);">
-						<?php the_post_thumbnail( 'portfolio-featured-large' ); ?>
-					</div>
-
-				<?php } elseif ( ! empty( $header_image ) ) { ?>
-
-					<div id="custom-header" class="bg-img" style="background-image: url(<?php header_image(); ?>);">
-						<img class='img-hide' src="<?php header_image(); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" alt="<?php echo esc_attr( get_bloginfo() ); ?>" />
-					</div>
-
-				<?php } ?>
-
-			<!-- END .ten columns -->
-			</div>
-
-			<!-- BEGIN .six columns -->
-			<div class="six columns">
-
-				<?php get_template_part( 'content/loop', 'excerpt' ); ?>
-
-			<!-- END .six columns -->
-			</div>
-
-		<!-- END .post-header -->
-		</div>
-
-	<!-- END .row -->
-	</div>
-
-	<?php } ?>
 
 	<!-- BEGIN .row -->
 	<div class="row">
 
 		<!-- BEGIN .content -->
 		<div class="content">
-
+		
 			<!-- BEGIN .sixteen columns -->
-			<div class="sixteen columns">
+			<div class="<? echo(is_active_sidebar( 'sidebar-blog' )? 'eleven' : 'sixteen') ?> columns">
+			
+				<!-- BEGIN .post-area -->
+				<div class="post-area<? echo(is_active_sidebar( 'sidebar-blog' )? '' : ' no-sidebar') ?>">
+				
+					<div class="article-category"><?php the_category(' | '); ?></div>
+					
+					<!-- BEGIN .post-meta -->
+					<div class="post-meta">
+					
+						<!-- BEGIN .post-date -->
+						<div class="post-date">
 
-				<!-- BEGIN .post-area no-sidebar -->
-				<div class="post-area no-sidebar">
+							<!-- Date -->
+							<p><?php portfolio_lite_posted_on(); ?></p>
+
+						<!-- END .post-date -->
+						</div>
+
+					<!-- END .post-meta -->
+					</div>
+					
+					<h1 class="headline"><?php the_title(); ?></h1>
 
 					<?php get_template_part( 'content/loop', 'post' ); ?>
 
-				<!-- END .post-area no-sidebar -->
+				<!-- END .post-area -->
+				</div>
+				
+			<!-- END .eleven/sixteen columns -->
+			</div>
+			
+			<?php if ( is_active_sidebar( 'sidebar-blog' ) ) { ?>
+			
+				<!-- BEGIN .five columns -->
+				<div class="five columns">
+	
+					<?php get_sidebar('blog'); ?>
+	
+				<!-- END .five columns -->
 				</div>
 
-			<!-- END .sixteen columns -->
-			</div>
-
+			<?php } ?>
+		
 		<!-- END .content -->
 		</div>
 

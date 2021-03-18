@@ -25,7 +25,7 @@
 
 <?php wp_body_open(); ?>
 
-<?php $header_image = get_header_image(); ?>
+<?php $header_image = is_single() && has_post_thumbnail()? get_the_post_thumbnail_url() : get_header_image(); ?>
 <?php $blog = is_home(); ?>
 
 <?php if ( has_nav_menu( 'slide-menu' ) ) { ?>
@@ -128,11 +128,11 @@
 
 	<!-- END #header -->
 	</div>
-
+	
 	<!-- BEGIN #panel -->
 	<main id="panel" class="container clearfix">
 
-		<?php if ( ! is_single() ) { ?>
+		<?php if ( true /*! is_single()*/ ) { ?>
 
 		<!-- BEGIN .four columns -->
 		<div id="header" class="three columns side-header">
@@ -195,10 +195,11 @@
 			<!-- END #masthead -->
 			</div>
 
-			<?php if ( $blog && ! empty( $header_image ) || is_category() && ! empty( $header_image ) || is_search() && ! empty( $header_image ) || is_archive() && ! empty( $header_image ) ) { ?>
+			<?php if ( $blog && ! empty( $header_image ) || is_category() && ! empty( $header_image ) || is_search() && ! empty( $header_image ) || is_archive() && ! empty( $header_image )
+				|| is_single() && ! empty( $header_image ) ) { ?>
 
-				<div id="custom-header" class="bg-img" style="background-image: url(<?php header_image(); ?>);">
-					<img class='img-hide' src="<?php header_image(); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" alt="<?php echo esc_attr( get_bloginfo() ); ?>" />
+				<div id="custom-header" class="bg-img" style="background-image: url(<?php echo $header_image ?>);">
+					<img class='img-hide' src="<?php echo $header_image ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" alt="<?php echo esc_attr( get_bloginfo() ); ?>" />
 				</div>
 
 			<?php } ?>

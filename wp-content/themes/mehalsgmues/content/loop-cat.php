@@ -27,13 +27,12 @@
 	<!-- BEGIN .post class -->
 	<div <?php post_class( 'archive-holder' ); ?> id="post-<?php the_ID(); ?>">
 
-		<div class="article-category"><?php the_category(' '); ?></div>
-		<div class="article-date"><?php the_date(); ?></div>
+		<div class="article-category"><?php the_category(' | '); ?></div>
+		
+		<div class="article-date"><?php echo(get_the_date()); ?></div>
+		
 		<a href="<?php the_permalink(); ?>" rel="bookmark"><h2 class="article-title"><?php the_title(); ?></h2></a>
-		<div class="entry-content">
-			<?php the_excerpt(); ?>
-		</div>
-
+		
 		<?php if ( has_post_thumbnail() ) { ?>
 			<a href="<?php the_permalink(); ?>" rel="bookmark">
 			<div class="feature-img">
@@ -43,6 +42,10 @@
 			</div>
 			</a>
 		<?php } ?>
+
+		<div class="entry-content">
+			<?php the_excerpt(); ?>
+		</div>
 
 	<!-- END .post class -->
 	</div>

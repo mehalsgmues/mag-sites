@@ -17,6 +17,32 @@ get_header(); ?>
 
 		<!-- BEGIN .content -->
 		<div class="content">
+		
+		<?php if ( is_active_sidebar( 'sidebar-1' ) ) { ?>
+		
+			<!-- BEGIN .eleven columns -->
+			<div class="eleven columns">
+
+				<!-- BEGIN .post-area -->
+				<div class="post-area">
+
+					<?php get_template_part( 'content/loop', 'cat' ); ?>
+
+				<!-- END .post-area -->
+				</div>
+
+			<!-- END .eleven columns -->
+			</div>
+
+			<!-- BEGIN .five columns -->
+			<div class="five columns">
+
+				<?php get_sidebar(); ?>
+
+			<!-- END .five columns -->
+			</div>
+
+		<?php } else { ?>
 
 			<!-- BEGIN .sixteen columns -->
 			<div class="sixteen columns">
@@ -31,6 +57,8 @@ get_header(); ?>
 
 			<!-- END .sixteen columns -->
 			</div>
+
+		<?php } ?>
 
 		<!-- END .content -->
 		</div>

@@ -412,7 +412,7 @@ if ( ! function_exists( 'portfolio_lite_posted_on' ) ) :
 
 	/** Function portfolio_lite_posted_on */
 	function portfolio_lite_posted_on() {
-		printf( __( '<span class="%1$s">Posted:</span> %2$s', 'portfolio-lite' ),
+		printf( __( '<span class="%1$s"></span> %2$s', 'portfolio-lite' ),
 			'meta-prep meta-prep-author',
 			sprintf( '<a href="%1$s" title="%2$s" rel="bookmark"><span class="entry-date">%3$s</span></a>',
 				esc_url( get_permalink() ),

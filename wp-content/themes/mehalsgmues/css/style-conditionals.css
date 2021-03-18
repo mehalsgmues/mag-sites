@@ -189,9 +189,10 @@ body.dark {
 	align-content: center;
 	justify-content: space-between;
 }
-.portfolio-not-single #header.top-header,
-.portfolio-has-logo.portfolio-not-single #header.top-header {
-	display: none;
+/* .portfolio-not-single #header.top-header, */
+/* .portfolio-has-logo.portfolio-not-single #header.top-header { */
+#header.top-header {
+	display: none!important;
 }
 .portfolio-no-logo #header.side-header {
 	padding-top: 48px;

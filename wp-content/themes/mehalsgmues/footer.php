@@ -39,9 +39,12 @@
 				class="align-center"<?php } ?>>
 
 				<p class="footer-credits">
-					meh als gmües - Reckenholzstrasse 150, 8046 Zürich
+					meh als gmï¿½es - Reckenholzstrasse 150, 8046 Zï¿½rich
 				</p>
-
+			</div>
+			
+			<div>
+				<?php if ( function_exists('cn_social_icon') ) echo cn_social_icon(); ?>
 			</div>
 
 			<?php if ( has_nav_menu( 'footer-menu' ) ) { ?>
