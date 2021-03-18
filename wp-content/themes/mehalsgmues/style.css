@@ -3229,3 +3229,61 @@ ul.wp-block-latest-posts li {
 
 
 
+
+
+
+/* signup form */
+
+.wpcf7-form p {
+	margin: 1.4em 0 0.4em 0
+}
+
+div.wpcf7-response-output {
+	margin:  0 !important;
+}
+
+#signup-form {
+	display: flex;
+  align-items: start;
+  flex-flow: row nowrap;
+}
+
+#signup-email {
+	width: 100%;
+	border-radius: 3px 0 0 3px;
+	border-right-width: 0;
+	height: 50px;
+	border-color: #543e47;
+	color: #543e47;
+}
+
+#signup-submit {
+	height: 50px;
+	width: 10em;
+	border-radius: 0 3px 3px 0;
+	border-color: #759c00;
+	background-color: #759c00;
+	color: white;
+	flex-shrink: 2;
+}
+
+#signup-submit:hover {
+	opacity : 0.7;
+}
+
+/* alpha list */
+ol.lower-alpha {
+    counter-reset: list;
+}
+
+ol.lower-alpha > li {
+    counter-increment: list;
+}
+
+ol.lower-alpha > li::marker {
+  content: counter(list, lower-alpha) ")\a0";
+}
+
+
+
+
