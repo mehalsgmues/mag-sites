@@ -107,7 +107,7 @@
 	.portfolio-not-single #header.top-header {
 		display: block;
 	}
-	.portfolio-has-logo.portfolio-not-single #header.top-header {
+	.portfolio-has-logo #header.top-header {
 		display: flex!important;
 		align-content: center;
 		justify-content: space-between;
@@ -116,7 +116,8 @@
         display: none;
     }
 	#masthead {
-		display: block;
+/* 		display: block; */
+		display: none;
 		padding: 12px;
 		overflow: hidden;
 		box-sizing: border-box;
@@ -157,7 +158,7 @@
 	.archive .content,
 	.category .content,
 	.portfolio .content {
-		padding: 0px 36px;
+/* 		padding: 0px 36px; */
 	}
 	.blog .headline,
 	.archive .headline,
@@ -358,7 +359,7 @@
 		position: absolute;
 		z-index: 3;
 		background-color: white;
-		padding: 30px;
+		padding: 24px;
 		border-radius: 100%;
 		left: 10px;
 		top: 0;
@@ -369,7 +370,7 @@
 	}
 	
 	.custom-logo {
-		height: 150px !important;
+		height: 140px !important;
 		width: auto !important;
 	}
 }
@@ -380,12 +381,17 @@
 	}
 	
 	.site-logo a {
-		left: 0px;
+/* 		left: 0px; */
 		margin-top: -15px;
 	}
 	
+	.site-logo a {
+		padding: 30px 24px 18px;
+	}
+	
 	.custom-logo {
-		height: 130px !important;
+		max-width: 100px !important;
+		max-height: 100px !important;
 	}
 }
 
