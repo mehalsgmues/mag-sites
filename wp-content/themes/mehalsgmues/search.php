@@ -27,7 +27,7 @@ get_header(); ?>
 				<!-- BEGIN .post-area -->
 				<div class="post-area">
 
-					<?php get_template_part( 'content/loop', 'archive' ); ?>
+					<?php get_template_part( 'content/loop', 'cat' ); ?>
 
 				<!-- END .post-area -->
 				</div>
