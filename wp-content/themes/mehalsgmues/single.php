@@ -23,7 +23,7 @@ get_header(); ?>
 				<!-- BEGIN .post-area -->
 				<div class="post-area<? echo(is_active_sidebar( 'sidebar-blog' )? '' : ' no-sidebar') ?>">
 				
-					<div class="article-category"><?php the_category(' | '); ?></div>
+					<div class="article-category"><?php the_category(' '); ?></div>
 					
 					<!-- BEGIN .post-meta -->
 					<div class="post-meta">
@@ -32,7 +32,7 @@ get_header(); ?>
 						<div class="post-date">
 
 							<!-- Date -->
-							<p><?php portfolio_lite_posted_on(); ?></p>
+							<p><?php echo get_the_author_meta('display_name', $post->post_author).', '; portfolio_lite_posted_on(); ?></p>
 
 						<!-- END .post-date -->
 						</div>

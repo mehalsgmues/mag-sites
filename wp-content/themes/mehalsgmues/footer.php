@@ -32,23 +32,26 @@
 			<?php
 			if ( has_nav_menu( 'footer-menu' ) ) {
 				?>
-				class="align-left"
+				class="address"
 				<?php
 			} else {
 				?>
-				class="align-center"<?php } ?>>
+				class="address"
+				<?php
+			}
+				?>>
 
 				meh als gmües - Reckenholzstrasse 150, 8046 Zürich
 
 			</div>
 			
-			<div>
+			<div class="social">
 				<?php if ( function_exists('cn_social_icon') ) echo cn_social_icon(); ?>
 			</div>
 
 			<?php if ( has_nav_menu( 'footer-menu' ) ) { ?>
 
-			<div class="align-right">
+			<div class="menu">
 
 				<?php
 				wp_nav_menu(

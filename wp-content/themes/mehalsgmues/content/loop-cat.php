@@ -27,9 +27,15 @@
 	<!-- BEGIN .post class -->
 	<div <?php post_class( 'archive-holder' ); ?> id="post-<?php the_ID(); ?>">
 
-		<div class="article-category"><?php the_category(' | '); ?></div>
+		<div class="article-category"><?php the_category(' '); ?></div>
 		
-		<div class="article-date"><?php echo(get_the_date()); ?></div>
+		<div class="author-date-wrapper">
+			<div class="author"><?php echo get_the_author_meta('display_name') ?></div>
+			<div class="article-date"><?php echo(get_the_date()); ?></div>
+		</div>
+
+		<div class="author-date"><?php echo get_the_author_meta('display_name').', '.get_the_date() ?></div>
+
 		
 		<a href="<?php the_permalink(); ?>" rel="bookmark"><h2 class="article-title"><?php the_title(); ?></h2></a>
 		

@@ -412,13 +412,16 @@ if ( ! function_exists( 'portfolio_lite_posted_on' ) ) :
 
 	/** Function portfolio_lite_posted_on */
 	function portfolio_lite_posted_on() {
-		printf( __( '<span class="%1$s"></span> %2$s', 'portfolio-lite' ),
-			'meta-prep meta-prep-author',
-			sprintf( '<a href="%1$s" title="%2$s" rel="bookmark"><span class="entry-date">%3$s</span></a>',
-				esc_url( get_permalink() ),
-				esc_attr( get_the_time() ),
-				get_the_date()
-			)
+// 		printf( __( '<span class="%1$s"></span> %2$s', 'portfolio-lite' ),
+// 			'meta-prep meta-prep-author',
+// 			sprintf( '<a href="%1$s" title="%2$s" rel="bookmark"><span class="entry-date">%3$s</span></a>',
+// 				esc_url( get_permalink() ),
+// 				esc_attr( get_the_time() ),
+// 				get_the_date()
+// 			)
+// 		);
+		printf( '<span class="entry-date">%1$s</span>',
+			get_the_date()
 		);
 	}
 

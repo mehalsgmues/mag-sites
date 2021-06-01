@@ -11,9 +11,17 @@
 <!-- BEGIN .no-results -->
 <div class="no-results">
 
-	<h1 class="headline"><?php esc_html_e( 'No Results Found', 'portfolio-lite' ); ?></h1>
-	<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching will help.', 'portfolio-lite' ); ?></p>
-	<div class="no-result-search"><?php get_search_form(); ?></div>
+	<h1 class="headline"><?php
+		echo '"';
+		esc_html_e($_GET['s']);
+		echo '"?<br>';
+		esc_html_e('Dazu haben wir noch kein Rezept.', 'portfolio-lite' );
+	?></h1>
+	
+	<p><?php
+		esc_html_e( 'Wir haben aber immer Appetit auf Neues.', 'portfolio-lite' );
+		echo '<br><a href="/rezepte-einsenden">Schreib uns!</a>';
+	?></p>
 
 <!-- END .no-results -->
 </div>
