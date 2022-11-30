@@ -732,3 +732,11 @@ require_once( get_template_directory() . '/customizer/customizer.php' );
 require_once( get_template_directory() . '/includes/typefaces.php' );
 require_once( get_template_directory() . '/includes/plugin-activation.php' );
 require_once( get_template_directory() . '/includes/plugin-activation-class.php' );
+
+
+// url field disabler
+function remove_url_comments($fields) {
+	unset($fields['url']);
+	return $fields;
+}
+add_filter('comment_form_default_fields','remove_url_comments');

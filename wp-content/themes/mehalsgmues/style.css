@@ -125,9 +125,12 @@ body.wp-autoresize .content {
 ************************************************/
 
 p {
-	margin: 32px 0px;
+	margin: 24px 0px;
 	padding: 0px;
 	line-height: 1.5em;
+}
+p:last-child {
+	margin-bottom: 0;
 }
 p:empty {
 	display: none;
@@ -2034,7 +2037,7 @@ html[xmlns] .slides {
 	padding: 36px 0px;
 }
 #comments-title {
-	font-size: 2em;
+/* 	font-size: 2em; */
 	margin: 4px 0px 8px 0px;
 	padding: 4px 0px 8px 0px;
 }
@@ -3304,6 +3307,10 @@ ul.wp-block-latest-posts li {
 
 .single .content .wp-block-columns:not(:first-child) {
 	margin-top: 4rem;
+}
+
+.single .content h5 + .wp-block-columns:not(:first-child) {
+	margin-top: 1rem;
 }
 
 .single .content .wp-block-columns:not(:last-child) {

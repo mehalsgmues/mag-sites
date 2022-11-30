@@ -18,7 +18,7 @@ get_header(); ?>
 		<!-- BEGIN .content -->
 		<div class="content">
 		
-		<?php if ( is_active_sidebar( 'sidebar-1' ) ) { ?>
+		<?php if ( false ) { ?>
 		
 			<!-- BEGIN .eleven columns -->
 			<div class="eleven columns">
