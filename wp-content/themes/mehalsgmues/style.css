@@ -3660,3 +3660,24 @@ ul.wp-block-post-template li {
 h4.wp-block-post-title {
 	margin-top: 0.2em;
 }
+
+/* article navigation links */
+
+.article-navigation {
+  display: flex;
+  gap: 3em;
+  justify-content: space-between;
+  border-top: 1px solid #775740;
+  margin-top: 3em;
+}
+
+@media (max-width:600px) {
+  .article-navigation {
+    flex-wrap: wrap;
+  }
+}
+
+.article-navigation-previous {
+  text-align: right;
+}
+

@@ -63,6 +63,15 @@ if ( have_posts() ) :
 
 				<?php } ?>
 
+				<div class="article-navigation">
+					<div class="article-navigation-next">
+						<?php next_post_link('&larr; %link'); ?>
+					</div>
+					<div class="article-navigation-previous">
+						<?php previous_post_link('%link &rarr;'); ?>
+					</div>
+				</div>
+
 			<!-- END .article -->
 			</article>
 
