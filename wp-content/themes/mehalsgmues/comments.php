@@ -36,10 +36,10 @@
 			<?php
 				$count = get_comments_number();
 				$title = get_the_title();
-				if ( 1 === $count ) {
-					printf( esc_html__( 'One Comment on &ldquo;%1$s&rdquo;', 'portfolio-lite' ), $title );
+				if ( 1 == $count ) {
+					printf( esc_html__( 'Ein Kommentar', 'portfolio-lite' ), $title );
 				} else {
-					printf( esc_html__( '%1$s Comments on &ldquo;%2$s&rdquo;', 'portfolio-lite' ), $count, $title );
+					printf( esc_html__( '%1$s Kommentare', 'portfolio-lite' ), $count, $title );
 				}
 			?>
 		</h3>
