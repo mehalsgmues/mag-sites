@@ -48,26 +48,43 @@
 *******************************************************************************************************************/
 
 
+/*
+base color: #1e3b21
+light color: #9cb84d
+accent color: #ed6c77
+*/
 
 
 /* Fonts */
-
 @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,400;0,800;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Rochester&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alice&family=Cambo&family=Gentium+Book+Basic:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Neuton:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Averia+Libre:wght@400;700&family=Corben:wght@400;700&family=Overlock:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Capriola&family=Imprima&family=Kosugi+Maru&family=Livvic:wght@400;700&family=Mallanna&family=Manjari:wght@400;700&family=Varela+Round&display=swap');
 
 @font-face {
-	font-family: 'Underwood Champion';
-	src: url(/wp-content/themes/mehalsgmues/fonts/underwood_champion-webfont.woff) format('woff');
+	font-family: 'GT Walsheim';
+	src: url('/wp-content/themes/mehalsgmues/fonts/GT-Walsheim-Regular.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
 }
 
+@font-face {
+	font-family: 'GT Walsheim';
+	src: url('/wp-content/themes/mehalsgmues/fonts/GT-Walsheim-Regular-Oblique.woff2') format('woff2');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'GT Walsheim';
+	src: url('/wp-content/themes/mehalsgmues/fonts/GT-Walsheim-Medium.woff2') format('woff2');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GT Walsheim';
+	src: url('/wp-content/themes/mehalsgmues/fonts/GT-Walsheim-Medium-Oblique.woff2') format('woff2');
+	font-weight: bold;
+	font-style: italic;
+}
 
 
 /* Nicolas Gallagher's micro clearfix */
@@ -87,14 +104,13 @@ button, .button, a.button, .reply a, #searchsubmit, #prevLink a, #nextLink a, a.
 input[type=submit], input#submit, input.button, #wrapper #infinite-handle span, .wp-block-button a,
 .wprm-recipe, .wprm-recipe-template-mehalsgmuees p, .wprm-recipe-template-mehalsgmuees li,
 .astm-search-menu input {
-	font-family: 'Imprima', serif !important;
+	font-family: 'GT Walsheim', serif !important;
 }
 	
 h1, h2, h3, h4, .subheader +p, ul.menu,
 .wp-block-latest-posts a,
 .badge {
-	font-family: 'Underwood Champion', sans-serif;
-/* 	font-family: 'Caveat', cursive; */
+	font-family: 'GT Walsheim', sans-serif;
 }
 	
 /* -- */
@@ -102,11 +118,9 @@ h1, h2, h3, h4, .subheader +p, ul.menu,
 
 body {
 	background-color: #ffffff;
-/* 	color: #775740; */
-	color: #543e2d;
+	color: #1e3b21;
 	font-size: 14pt;
-/* 	font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; */
-	font-weight: 400;
+	font-weight: normal;
 	line-height: 1.65;
 	margin: 0px;
 	padding: 0px;
@@ -134,9 +148,6 @@ p:last-child {
 }
 p:empty {
 	display: none;
-}
-p, li {
-/* 	color: #543e2d !important; */
 }
 dfn, cite, em, i {
 	font-style: italic;
@@ -179,8 +190,8 @@ span {
 hr {
 	border: 0;
 	height: 2px;
-	color: #775740;
-	background-color: #775740;
+	color: #1e3b21;
+	background-color: #1e3b21;
 	margin: 36px auto;
 	padding: 0px;
 }
@@ -283,7 +294,7 @@ img, object, embed {
 .text-white, .text-white p, .text-white h1,
 .text-white h2, .text-white h3, .text-white h4,
 .text-white h5, .text-white h6, .text-white blockquote {
-	color: #775740;
+	color: #1e3b21;
 }
 .align-center {
 	float: none;
@@ -332,23 +343,18 @@ a img {
 	border: none;
 }
 a, a:link, a:visited {
-	color: #775740;
-/* 	color: #759c00; */
-/* 	color: #C9BCB3; */
-    font-weight: bold;
+	color: #ed6c77;
+	font-weight: bold;
 	text-decoration: none;
 	word-wrap: break-word;
 	border-bottom: 2px solid transparent;
 }
 a:focus, a:hover, a:active {
-	color: #775740;
-/* 	color: #759c00; */
-/* 	text-decoration: underline; */
-	border-bottom-color: #775740 !important;
+	color: #ed6c77;
+	border-color: #ed6c77 !important;
 }
 
 p a:link, p a:visited {
-/* 	font-weight: normal !important; */
 	border-bottom-color: #C9BCB3;
 }
 
@@ -357,9 +363,7 @@ p a:link, p a:visited {
 ************************************************/
 
 h1, h2, h3, h4, h5, h6 {
-/* 	color: #543e2d; */
-/* 	font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; */
-	font-weight: 400;
+	font-weight: bold;
 	line-height: 1.4;
 	word-wrap: break-word;
 	margin: 2.3em 0px 6px 0px;
@@ -389,20 +393,18 @@ h6 {
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
 h1 a:link, h2 a:link, h3 a:link, h4 a:link, h5 a:link, h6 a:link,
 h1 a:visited, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited {
-/* 	color: #543e2d; */
 	text-decoration: none;
 	border: none;
 }
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover,
 h1 a:focus, h2 a:focus, h3 a:focus, h4 a:focus, h5 a:focus, h6 a:focus,
 h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
-/* 	color: #543e2d; */
 	text-decoration: none;
 	border: none;
 }
 .headline {
 	font-size: 1.6em;
-	font-weight: 400;
+	font-weight: bold;
 	letter-spacing: 0px;
 	margin: 0px 0px 24px 0px;
 	padding: 0px;
@@ -417,7 +419,7 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 .title {
 	color: rgba(0, 0, 0, 0.4);
 	font-size: 0.9em;
-	font-weight: 400;
+	font-weight: bold;
 	letter-spacing: 0px;
 	line-height: 1.4;
 	padding: 0px;
@@ -479,7 +481,7 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 .site-title {
 	float: left;
 	font-size: 1.1em;
-	font-weight: 600;
+	font-weight: bold;
 	line-height: 1.1;
 	letter-spacing: 1px;
 	text-transform: uppercase;
@@ -547,7 +549,7 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 /* Slideout Menu */
 
 #slide-menu {
-	background: #775740;
+	background: #1e3b21;
 	padding: 24px;
 	box-sizing: border-box;
 	touch-action: pan-x;
@@ -668,7 +670,6 @@ ul.menu li a,
 ul.menu li a:link,
 ul.menu li a:visited {
 	display: block;
-/* 	color: rgba(119, 87, 64, 0.4); */
 	color: #C9BCB3;
 	border: none;
 	border-right: 3px solid transparent;
@@ -860,7 +861,7 @@ ul.menu li li a::after {
 .article h2:first-child + p,
 .article h2:first-child + .feature-img + p,
 .article > p:first-child {
-	color: #775740;
+	color: #1e3b21;
 	font-size: 1.2em;
 	font-weight: 300;
 	line-height: 1.45;
@@ -875,7 +876,7 @@ ul.menu li li a::after {
 	margin: 12px 0px;
 }
 .excerpt p:first-child {
-	color: #775740;
+	color: #1e3b21;
 	font-size: 1.1em;
 	font-weight: 300;
 	line-height: 1.6;
@@ -909,22 +910,11 @@ ul.menu li li a::after {
 .post-meta {
 	display: block;
 	position: relative;
-/* 	color: #999999; */
-/* 	color: rgba(0, 0, 0, 0.4); */
 	font-size: 0.8em;
 	margin: 12px 0px;
 	padding: 6px 0px;
 	overflow: hidden;
 }
-/* .post-meta::before { */
-/* 	display: block; */
-/* 	position: absolute; */
-/* 	bottom: 24px; */
-/* 	content: ''; */
-/* 	width: 100%; */
-/* 	border-top: 1px solid rgba(0, 0, 0, 0.12); */
-/* 	z-index: 1; */
-/* } */
 .post-meta .author-avatar {
 	float: none;
 	display: inline-block;
@@ -1192,7 +1182,6 @@ body.portfolio-landing-page {
 .pagination {
 	display: block;
 	width: 100%;
-/* 	font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; */
 	font-weight: bold;
 	text-align: center;
 	line-height: 36px;
@@ -2189,7 +2178,7 @@ a.wprm-recipe-jump
 	position: relative;
 	color: rgba(0, 0, 0, 0.6);
 	background-color: #ffffff;
-	font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+	font-family: 'GT Walsheim', 'Helvetica Neue', Arial, sans-serif;
 	font-size: 0.8em;
 	font-weight: 400;
 	font-style: normal;
@@ -2879,6 +2868,7 @@ a.link-participate:hover {
 
 .footer-information > div {
 	text-align: center;
+	color: #775740;
 }
 
 @media handheld, only screen and (max-width: 1023px) {
@@ -2916,9 +2906,9 @@ a.wprm-recipe-jump:hover {
 
 .wp-block-button.is-style-fill a,
 a.wprm-recipe-jump {
-	background-color: #759c00;
-	border-color: #759c00!important;
-	color: white!important;
+	background-color: #ed6c77;
+	border-color: #ed6c77 !important;
+	color: white !important;
 }
 
 .wp-block-button.is-style-fill a:hover {
@@ -3025,8 +3015,7 @@ ol.broad li::marker {
 #menu-menu-1 li:first-child a,
 #menu-menu-1 li:first-child a:before,
 #menu-menu-1 li:first-child a:after {
-	background-color: #759C00;
-/* 	border-radius: 100%; */
+	background-color: #ed6c77;
 	border-radius: 4px;
 }
 
@@ -3114,7 +3103,7 @@ ol.broad li::marker {
 .qtip-dark {
     background-color: #ffffffe9;
     border-color: #303030;
-    color: #775740;
+    color: #1e3b21;
 }
 
 .qtip {
@@ -3128,7 +3117,7 @@ ol.broad li::marker {
 /* FAQ search */
 
 #faq-search {
-    border: 2px solid #775740;
+    border: 2px solid #ed6c77;
     padding: .5em;
     font-size: 18pt;
     color: inherit;
@@ -3169,7 +3158,6 @@ ol.broad li::marker {
 	border-bottom: 1px solid #775740;
 	margin-top: 2.3em;
 	display: flex;
-/* 	justify-content: flex-end; */
 	flex-wrap: wrap;
 }
 
@@ -3177,6 +3165,7 @@ ol.broad li::marker {
 .article-category a:after {
 	border: 1px solid #77574066;
 	border-radius: 4px;
+	color: #775740;
 }
 
 .article-category a {
@@ -3185,8 +3174,6 @@ ol.broad li::marker {
 	border-right: none;
 	font-size: 0.75rem;
 	line-height: normal;
-/* 	font-weight: 400; */
-/* 	margin: 0.5rem 0.75rem 0 0.25rem; */
 	margin-bottom: 0.5rem;
 }
 .article-category a:not(:last-child) {
@@ -3291,7 +3278,7 @@ ul.wp-block-latest-posts li {
 
 /* h5 used for lead in articles */
 .single h5 {
-	font-weight: 600;
+	font-weight: bold;
 }
 
 
@@ -3402,7 +3389,7 @@ ul.wp-block-latest-posts li {
 }
 
 .wprm-recipe-template-mehalsgmuees .wprm-recipe-name, .wprm-recipe-template-mehalsgmuees .wprm-recipe-header {
-	font-family: 'Underwood Champion', sans-serif !important;
+	font-family: 'GT Walsheim', sans-serif !important;
 }
 
 .wprm-block-text-uppercase-faded {
@@ -3458,16 +3445,16 @@ div.wpcf7-response-output {
 	border-radius: 3px 0 0 3px;
 	border-right-width: 0;
 	height: 50px;
-	border-color: #543e47;
-	color: #543e47;
+	border-color: #ed6c77;
+	color: #1e3b21;
 }
 
 #signup-submit {
 	height: 50px;
 	width: 10em;
 	border-radius: 0 3px 3px 0;
-	border-color: #759c00;
-	background-color: #759c00;
+	border-color: #ed6c77;
+	background-color: #ed6c77;
 	color: white;
 	flex-shrink: 2;
 }
@@ -3634,8 +3621,8 @@ h3.ics-calendar-label {
 
 .ics-calendar-list-wrapper .ics-calendar-date {
 	font-size: 14pt;
-	font-family: 'Imprima', serif;
-	color: #759C00;
+	font-family: 'GT Walsheim', serif;
+	color: #9cb84d;
 	padding: 0;
 	margin-bottom: 0;
 }
@@ -3644,13 +3631,13 @@ h3.ics-calendar-label {
 	font-size: 12pt;
 	font-style: italic;
 	padding-top: 0 !important;
-	color: #759C00;
+	color: #9cb84d;
 }
 
 .ics-calendar-list-wrapper dd span.title {
-	font-family: 'Underwood Champion', sans-serif;
+	font-family: 'GT Walsheim', sans-serif;
 	font-size: 18pt;
-	color: #775740;
+	color: #1e3b21;
 }
 
 ul.wp-block-post-template li {
@@ -3679,5 +3666,9 @@ h4.wp-block-post-title {
 
 .article-navigation-previous {
   text-align: right;
+}
+
+.leaflet-container a {
+  color: #333 !important;
 }
 

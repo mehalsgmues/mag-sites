@@ -124,11 +124,12 @@ if ( ! function_exists( 'portfolio_lite_enqueue_scripts' ) ) {
 		// Resgister Scripts.
 		wp_register_script( 'jquery-fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js', array( 'jquery' ), '1.0' );
 		wp_register_script( 'jquery-colourbrightness', get_template_directory_uri() . '/js/jquery.colourbrightness.js', array( 'jquery' ), '1.0' );
+		wp_register_script( 'jquery-sidr', get_template_directory_uri() . '/js/jquery.sidr.js', array( 'jquery' ), '1.0' );
 
 		// Enqueue Scripts.
 		wp_enqueue_script( 'hoverIntent' );
 		wp_enqueue_script( 'portfolio-slideout', get_template_directory_uri() . '/js/slideout.js', array(), '1.0' );
-		wp_enqueue_script( 'portfolio-custom', get_template_directory_uri() . '/js/jquery.custom.js', array( 'jquery', 'jquery-fitvids', 'jquery-colourbrightness' ), '1.0', true );
+		wp_enqueue_script( 'portfolio-custom', get_template_directory_uri() . '/js/jquery.custom.js', array( 'jquery', 'jquery-fitvids', 'jquery-colourbrightness', 'jquery-sidr'), '1.0', true );
 
 		// Load Flexslider on front page and slideshow page template.
 		if ( is_single() || is_page_template( 'template-slideshow-gallery.php' ) ) {
