@@ -645,10 +645,6 @@ button.menu-toggle .search-icon {
 	content: none;
 	margin-left: 0px;
 }
-#slide-menu ul.menu li li a::before {
-	content: '- ';
-	margin-right: 4px;
-}
 
 /* General Menu Styles */
 
@@ -694,10 +690,6 @@ ul.menu li li.current-menu-item a:link,
 ul.menu li li.current-menu-item a:visited {
 	margin: 0px 18px 0px 0px;
 	border-right: 1px solid rgba(0, 0, 0, 0.12);
-}
-ul.menu li li a::after {
-	content: ' -';
-	margin-left: 4px;
 }
 
 /* Footer Menu Styles */
@@ -3012,14 +3004,14 @@ ol.broad li::marker {
 /* Menu */
 
 
-#menu-menu-1 li:first-child a,
-#menu-menu-1 li:first-child a:before,
-#menu-menu-1 li:first-child a:after {
+#menu-menu-1 > li:first-child a,
+#menu-menu-1 > li:first-child a:before,
+#menu-menu-1 > li:first-child a:after {
 	background-color: #ed6c77;
 	border-radius: 4px;
 }
 
-#menu-menu-1 li:first-child a {
+#menu-menu-1 > li:first-child a {
 	position: relative;
 	z-index: 2;
 	display: inline-flex;
@@ -3033,27 +3025,27 @@ ol.broad li::marker {
 	padding: 0;
 }
 
-#menu-menu-1 li:first-child a:hover {
+#menu-menu-1 > li:first-child a:hover {
 	opacity: 0.7;
 }
 
-#menu-menu-1 li:first-child a:before,
-#menu-menu-1 li:first-child a:after {
+#menu-menu-1 > li:first-child a:before,
+#menu-menu-1 > li:first-child a:after {
 	content: "";
 	position: absolute;
 	z-index: -1;
 	top: 0; left: 0; right: 0; bottom: 0;
 }
 
-#menu-menu-1 li:first-child a:before {
+#menu-menu-1 > li:first-child a:before {
 	transform: rotate(-120deg);
 }
-#menu-menu-1 li:first-child a:after {
+#menu-menu-1 > li:first-child a:after {
 	transform: rotate(120deg);
 }
 
 
-#menu-menu-1 li:first-child a {
+#menu-menu-1 > li:first-child a {
 	font-family: 'Caveat', cursive;
 	color: white;
 	font-weight: normal;
@@ -3061,12 +3053,12 @@ ol.broad li::marker {
 	border-color: rgba(0,0,0,0);
 }
 
-#menu-menu-1 li:first-child a:hover {
+#menu-menu-1 > li:first-child a:hover {
 	border-color: rgba(0,0,0,0);
 }
 
 
-#menu-menu-1 li:last-child a {
+#menu-menu-1 > li:last-child a {
 	display: inline-block;
 	border: 1px solid #C9BCB3;
 	border-radius: 8px;
@@ -3075,7 +3067,7 @@ ol.broad li::marker {
 	font-weight: normal;
 }
 
-#menu-menu-1 li:last-child a:hover {
+#menu-menu-1 > li:last-child a:hover {
 	border: 1px solid #775740;
 }
 
